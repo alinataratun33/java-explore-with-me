@@ -2,11 +2,8 @@ package ru.practicum.main.compilations;
 
 import ru.practicum.main.compilations.dto.CompilationDto;
 import ru.practicum.main.compilations.dto.NewCompilationDto;
-import ru.practicum.main.events.EventMapper;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class CompilationMapper {
 
