@@ -1,10 +1,7 @@
 package ru.practicum.main.events;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ru.practicum.main.categories.Category;
 import ru.practicum.main.events.enums.State;
 import ru.practicum.main.locations.Location;
@@ -14,7 +11,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "events")
-@Data
+@Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

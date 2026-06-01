@@ -1,17 +1,15 @@
 package ru.practicum.main.compilations;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ru.practicum.main.events.Event;
 
 import java.util.List;
 
 @Entity
 @Table(name = "compilations")
-@Data
+@Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

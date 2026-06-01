@@ -1,9 +1,7 @@
 package ru.practicum.main.requests;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ru.practicum.main.events.Event;
 import ru.practicum.main.users.User;
 
@@ -11,7 +9,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "requests")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Request {
