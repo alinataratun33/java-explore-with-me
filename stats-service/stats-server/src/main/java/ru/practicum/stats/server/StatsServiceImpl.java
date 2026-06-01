@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.stats.dto.EndpointHitDto;
 import ru.practicum.stats.dto.ViewStatsDto;
+import ru.practicum.stats.server.exception.ValidationException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -33,7 +34,7 @@ public class StatsServiceImpl implements StatsService {
         log.info("Запрос статистики: период с {} по {}, URI={}", start, end, uris);
 
         if (start.isAfter(end)) {
-            throw new RuntimeException("Дата начала не может быть позже даты окончания");
+            throw new ValidationException("Дата начала не может быть позже даты окончания");
         }
 
         boolean hasUris = uris != null && !uris.isEmpty();
